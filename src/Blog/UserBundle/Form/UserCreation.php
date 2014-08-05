@@ -14,7 +14,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
-class Credential extends AbstractType
+class UserCreation extends AbstractType
 {
 
 
@@ -52,6 +52,6 @@ class Credential extends AbstractType
      */
     public function getName()
     {
-        return "Credential";
+        return "UserCreation";
     }
 }

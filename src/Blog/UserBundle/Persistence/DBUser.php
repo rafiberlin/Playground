@@ -9,9 +9,11 @@
 namespace Blog\UserBundle\Persistence;
 
 
+use Blog\UserBundle\Entity\Credential;
 use Blog\UserBundle\Entity\User;
 use Blog\UserBundle\Interfaces\UserDao;
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Driver\Statement;
 
 class DBUser implements UserDao
 {
@@ -31,7 +33,7 @@ class DBUser implements UserDao
      */
     function save($user)
     {
-        $salt = openssl_random_pseudo_bytes(22);
+        $salt = bin2hex(openssl_random_pseudo_bytes(22));
         $this->dbConnection->insert(
             "user",
             array(
@@ -42,6 +44,23 @@ class DBUser implements UserDao
             )
         );
 
+    }
+
+    /**
+     * @param Credential $credential
+     */
+    function authenticate($credential)
+    {
+        $success = false;
+        /**
+         * @var User $user
+         */
+        $user = $this->load($credential->getLogin());
+        $savedPassword = $this->getEncryptedPassword($credential->getPassword(), $user->getSalt());
+        if ($user->getPassword() == $savedPassword) {
+            $success = true;
+        }
+        return $success;
     }
 
     /**
@@ -66,13 +85,27 @@ class DBUser implements UserDao
         throw new \InvalidParameterException("Password and salt cannot be empty");
     }
 
-    function authenticate($login, $password){
-
-    }
 
     function load($login)
     {
-        // TODO: Implement load() method.
+        $slq = "SELECT * FROM user WHERE username = '" . $login . "'";
+        /**
+         * @var $stmt Statement
+         */
+        $stmt = $this->dbConnection->executeQuery($slq);
+        $res = $stmt->fetchAll();
+        $user = new User();
+        if (count($res) > 0) {
+            $userInfo = $res[0];
+            $user->setLogin($userInfo["username"]);
+            $user->setPassword($userInfo["password"]);
+            $user->setSalt($userInfo["salt"]);
+            $user->setCreationDate($userInfo["last_change"]);
+        } else {
+            throw new \Exception("User does not exist");
+        }
+
+        return $user;
     }
 
     function delete($id)

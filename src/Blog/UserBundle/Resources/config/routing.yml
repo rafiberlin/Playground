@@ -1,6 +1,6 @@
 blog_user_login:
-    path:     /login/
+    path:     /user/login/
     defaults: { _controller: BlogUserBundle:Default:login }
 blog_user_creation:
-    path:     /new/
+    path:     /user/new/
     defaults: { _controller: BlogUserBundle:Default:new }
