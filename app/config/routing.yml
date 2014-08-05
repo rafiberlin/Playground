@@ -1,0 +1,8 @@
+blog_user:
+    resource: "@BlogUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test_first:
+    resource: "@TestFirstBundle/Resources/config/routing.yml"
+    prefix:   /
+
