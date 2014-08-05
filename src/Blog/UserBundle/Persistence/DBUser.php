@@ -66,7 +66,11 @@ class DBUser implements UserDao
         throw new \InvalidParameterException("Password and salt cannot be empty");
     }
 
-    function load($id)
+    function authenticate($login, $password){
+
+    }
+
+    function load($login)
     {
         // TODO: Implement load() method.
     }
