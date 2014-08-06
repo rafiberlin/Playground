@@ -10,8 +10,7 @@ body {
     font-size: 0.95em;
     font-family: Arial, SunSans-Regular, Sans-Serif;
     color: #fff;
-    background-image: url("/bundles/bloguser/images/berlin.jpg")
-    /*Bug Assetics, export your asset to web first*/
+    background-image: url("../images/berlin.jpg");
 }
 
 a {
@@ -41,7 +40,7 @@ h1, h2 {
 .container {
     max-width: 1200px;
     min-width: 960px;
-    background-color: #2ECCFA;
+    background-color: #CEF6F5;
     color: #ffffff;
     margin: auto;
 
@@ -90,12 +89,12 @@ nav a:visited {
 }
 
 nav a:hover {
-    color: #000000;
+    color: #ccc;
 }
 
 button {
-    background-color: #5eb5e0;
-    color: #ffffff;
+    background-color: #2ECCFA;
+    color: #fff;
     border: 1px ridge black;
 }
 
@@ -105,12 +104,12 @@ section#content {
     float: left;
     width: 75%;
     padding: 20px;
-    background-color: #2ECCFA;
+    background-color: #CEF6F5;
     min-height: 800px;
     border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #000000;
 }
 
 /* -------------- side infos ------------- */

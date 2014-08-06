@@ -9,9 +9,11 @@
 <body class="container">
 {% include 'BlogUserBundle:Default:header.html.twig' %}
 {% include 'BlogUserBundle:Default:sidemenu.html.twig' %}
-{% block content %}
-    <!-- Insert Whatever -->
-{% endblock %}
+<section id="content">
+    {% block content %}
+        <!-- Insert Whatever -->
+    {% endblock %}
+</section>
 {% include 'BlogUserBundle:Default:footer.html.twig' %}
 </body>
 </html>

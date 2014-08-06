@@ -55,6 +55,13 @@ class DefaultController extends Controller
         if ($form->isValid()) {
             $this->save($user);
 
+            return $this->render(
+                'BlogUserBundle:Default:index.html.twig',
+                array(
+                    'name' => $user->getLogin()
+                )
+            );
+
         }
 
         return $this->render(
