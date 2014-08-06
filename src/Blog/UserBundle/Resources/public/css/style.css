@@ -99,6 +99,10 @@ button {
     border: 1px ridge black;
 }
 
+button:hover {
+    background-color: #0088CC;
+}
+
 /* ----------------- content--------------------- */
 
 section#content {
