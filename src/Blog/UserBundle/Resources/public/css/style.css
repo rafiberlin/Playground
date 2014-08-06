@@ -1,6 +1,8 @@
 /* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
 /* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013 */
 
+
+
 header, footer, section, aside, nav, article {
     display: block;
 }
@@ -37,7 +39,7 @@ h1, h2 {
 
 /* ----------container zentriert das layout-------------- */
 
-#container {
+.container {
     max-width: 1200px;
     min-width: 960px;
     margin: 10px auto;
@@ -60,11 +62,15 @@ header {
 /* -------------- navigavtion------------- */
 
 nav {
+    float: right;
+    width: 20%;
     font-size: 16px;
     background: #2ECCFA;
     color: #fff;
     border: 1px solid black;
 }
+
+
 
 nav ul {
     list-style-type: none;
@@ -79,7 +85,6 @@ nav a {
     display: block;
     margin: 0;
     color: #fff;
-    border-right: 1px solid #97827F;
     padding: 10px 50px;
     text-decoration: none;
 }
@@ -90,6 +95,12 @@ nav a:visited {
 
 nav a:hover {
     color: #ccc;
+}
+
+button {
+    background-color: #2ECCFA;
+    color: #fff;
+    border: 1px ridge black;
 }
 
 /* ----------------- content--------------------- */
@@ -111,7 +122,7 @@ section#content {
 
 aside {
     padding: 20px;
-    float: left;
+    float: right;
     width: 25%;
 }
 
