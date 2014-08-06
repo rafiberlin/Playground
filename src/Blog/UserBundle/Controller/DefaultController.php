@@ -37,7 +37,7 @@ class DefaultController extends Controller
         }
 
         return $this->render(
-            'BlogUserBundle:Credential:user_creation.html.twig',
+            'BlogUserBundle:Credential:user_form.html.twig',
             array(
                 'phpForm' => $form->createView(),
             )
@@ -58,7 +58,7 @@ class DefaultController extends Controller
         }
 
         return $this->render(
-            'BlogUserBundle:Credential:user_creation.html.twig',
+            'BlogUserBundle:Credential:user_form.html.twig',
             array(
                 'phpForm' => $form->createView(),
             )

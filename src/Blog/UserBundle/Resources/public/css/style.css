@@ -1,0 +1,129 @@
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
+/* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013 */
+
+header, footer, section, aside, nav, article {
+    display: block;
+}
+
+body {
+    background-color: #CEF6F5;
+    font-size: 0.95em;
+    font-family: Arial, SunSans-Regular, Sans-Serif;
+    color: #fff;
+}
+
+a {
+    color: #DB7093;
+}
+
+a:visited {
+    color: #DB7093;
+}
+
+a:hover {
+    color: #564b47;
+}
+
+a:active {
+    color: #000000;
+}
+
+h1, h2 {
+    font-size: 1.8em;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+
+/* ----------container zentriert das layout-------------- */
+
+#container {
+    max-width: 1200px;
+    min-width: 960px;
+    margin: 10px auto;
+    background-color: #CEF6F5;
+    color: #ffffff;
+}
+
+/* ----------header for logo-------------- */
+header {
+    padding: 20px;
+    background-color: #2ECCFA;
+    border: 1px solid black;
+    color: #fff;
+    width: 75%;
+
+}
+
+
+
+/* -------------- navigavtion------------- */
+
+nav {
+    font-size: 16px;
+    background: #2ECCFA;
+    color: #fff;
+    border: 1px solid black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    display: block;
+    margin: 0;
+    color: #fff;
+    border-right: 1px solid #97827F;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #fff;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* ----------------- content--------------------- */
+
+section#content {
+    float: left;
+    width: 75%;
+    padding: 20px;
+    background-color: #00CED1;
+    min-height: 800px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* -------------- side infos ------------- */
+
+aside {
+    padding: 20px;
+    float: left;
+    width: 25%;
+}
+
+/* -----------footer--------------------------- */
+footer {
+    padding: 20px;
+    clear: both;
+    background-color: #2ECCFA;
+    border: 1px solid black;
+    color: #fff;
+    width: 75%;
+}
+
+/* -----------footer--------------------------- */
+

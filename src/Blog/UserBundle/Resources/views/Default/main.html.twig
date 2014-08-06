@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Test</title>
+    {% stylesheets '@BlogUserBundle/Resources/public/css/style.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body id="container">
+{% include 'BlogUserBundle:Default:header.html.twig' %}
+{% include 'BlogUserBundle:Default:sidemenu.html.twig' %}
+{% block content %}
+    <!-- Insert Whatever -->
+{% endblock %}
+{% include 'BlogUserBundle:Default:footer.html.twig' %}
+</body>
+</html>
