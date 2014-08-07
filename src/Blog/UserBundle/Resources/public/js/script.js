@@ -1,5 +1,5 @@
 /**
- * Created by rlatif on 06.08.14.
+ * Created by rafiberlin on 06.08.14.
  */
 
 function performAjaxVerification(username) {
