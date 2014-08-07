@@ -1,0 +1,119 @@
+/* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en
+/* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013
+
+
+@mixin shared_background()
+  background-color: #2ECCFA
+  border: 1px solid black
+  border-radius: 15px
+  color: #fff
+
+header, footer, section, aside, nav, article
+  display: block
+
+body
+
+  font-size: 0.95em
+  font-family: Arial, SunSans-Regular, Sans-Serif
+  color: #fff
+  background-image: url("/bundles/bloguser/images/berlin.jpg")
+
+a
+  color: #DB7093
+  &:visited
+    color: #DB7093
+  &:hover
+    color: #564b47
+  &:active
+    color: #000000
+
+h1, h2
+  font-size: 1.8em
+  font-weight: normal
+  margin: 0 0 20px
+
+/* ----------container zentriert das layout--------------
+
+.container
+  max-width: 1200px
+  min-width: 960px
+  margin: auto
+
+
+/* ----------header for logo--------------
+
+header
+  padding: 20px
+  width: 75%
+  @include shared_background()
+
+/* -------------- navigavtion-------------
+
+nav
+  float: right
+  width: 20%
+  font-size: 16px
+  margin-top: 20px
+  border-radius: 15px
+  ul
+    margin: 0
+    list-style-type: none
+  li
+    border: 1px ridge black
+    background: #2ECCFA
+    color: #fff
+    border-radius: 15px
+  a
+    display: block
+    margin: 0
+    color: #fff
+    padding: 10px 50px
+    text-decoration: none
+    &:visited
+      color: #fff
+    &:hover
+      color: #000000
+
+button
+  background-color: #5eb5e0
+  color: #ffffff
+  border: 1px ridge black
+  border-radius: 15px
+  &:hover
+    background-color: #0088CC
+
+/* ----------------- content---------------------
+
+section#content
+  float: left
+  width: 75%
+  padding: 20px
+  min-height: 800px
+  margin-top: 20px
+  margin-bottom: 20px
+  @include shared_background()
+
+form
+  border: 1px solid black
+  border-radius: 15px
+  padding: 20px
+  max-width: 50%
+  margin: auto
+
+/* -------------- side infos -------------
+
+aside
+  padding: 20px
+  float: right
+  width: 25%
+
+/* -----------footer---------------------------
+
+footer
+  padding: 20px
+  clear: both
+  width: 75%
+  @include shared_background()
+
+
+/* -----------footer---------------------------
