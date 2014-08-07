@@ -45,6 +45,6 @@ class DefaultController extends Controller
     {
 
 
-        return ;
+        return;
     }
 }

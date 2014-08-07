@@ -9,10 +9,14 @@
 namespace Blog\UserBundle\Interfaces;
 
 
-interface UserDao {
+interface UserDao
+{
 
     function save($user);
+
     function load($id);
+
     function delete($id);
+
     function update($user);
 }

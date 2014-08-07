@@ -9,7 +9,8 @@
 namespace Test\FirstBundle\Validator;
 
 
-class TestConstraint extends \Symfony\Component\Validator\Constraint{
+class TestConstraint extends \Symfony\Component\Validator\Constraint
+{
 
     public $message = "My custom message";
 

@@ -1,7 +1,7 @@
 /* css released under Creative Commons License -  http://creativecommons.org/licenses/by/2.0/deed.en  */
 /* html5 + CSS 3 Template created by miss monorom  http://intensivstation.ch 2013 */
 
-header, footer, section, aside, nav, article{
+header, footer, section, aside, nav, article {
     display: block;
 }
 
@@ -71,8 +71,6 @@ nav ul {
     margin: 0;
     list-style-type: none;
 }
-
-
 
 nav li {
     border: 1px ridge black;

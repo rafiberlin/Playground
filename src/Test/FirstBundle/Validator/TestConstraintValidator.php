@@ -12,7 +12,8 @@ namespace Test\FirstBundle\Validator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
-class TestConstraintValidator extends ConstraintValidator{
+class TestConstraintValidator extends ConstraintValidator
+{
 
     /**
      * Checks if the passed value is valid.

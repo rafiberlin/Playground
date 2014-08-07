@@ -22,16 +22,19 @@ class Task
     /**
      * @var $dummy MyDummy
      */
-    protected  $dummy;
+    protected $dummy;
 
-    function __construct(){
+    function __construct()
+    {
         $this->dummy = new MyDummy("Rafi");
     }
+
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
         $metadata
             ->addConstraint(new TestConstraint());
     }
+
     /**
      * @param MyDummy $dummy
      */
@@ -67,7 +70,6 @@ class Task
     {
         $this->dueDate = $dueDate;
     }
-
 
 
 }

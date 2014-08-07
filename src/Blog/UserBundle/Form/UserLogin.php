@@ -13,7 +13,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class UserLogin extends AbstractType{
+class UserLogin extends AbstractType
+{
 
 
     /**
@@ -22,9 +23,9 @@ class UserLogin extends AbstractType{
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add("login", "text", array("required"=>true))
-            ->add("password", "password",array("required"=>true))
-            ->add("submit","submit");
+            ->add("login", "text", array("required" => true))
+            ->add("password", "password", array("required" => true))
+            ->add("submit", "submit");
 
     }
 

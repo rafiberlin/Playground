@@ -20,7 +20,6 @@ class MyDummy
     private $vorname;
 
 
-
     /**
      * @param mixed $name
      */

@@ -10,7 +10,9 @@ use Blog\UserBundle\Form\UserLogin;
 use Blog\UserBundle\Persistence\DBUser;
 use Doctrine\DBAL\Connection;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -42,6 +44,12 @@ class DefaultController extends Controller
                 'phpForm' => $form->createView(),
             )
         );
+    }
+
+    public function ajaxAction($username)
+    {
+        $available = $this->isUsernameAvailable($username);
+        return new JsonResponse(array("available" => $available));
     }
 
     public function newAction(Request $request)
@@ -92,6 +100,25 @@ class DefaultController extends Controller
             'notice',
             $msg
         );
+    }
+
+    private function isUsernameAvailable($username)
+    {
+        /**
+         * @var Connection
+         */
+        $conn = $this->get("database_connection");
+
+        $success = false;
+        try {
+            $dbUser = new DBUser($conn);
+            $user = $dbUser->load($username);
+            $success = isset($user) ? false : true;
+        } catch (\Exception $e) {
+            $success = true;
+        }
+
+        return $success;
     }
 
     private function authenticate(Credential $credential)

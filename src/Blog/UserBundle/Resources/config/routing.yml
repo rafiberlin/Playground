@@ -4,3 +4,6 @@ blog_user_login:
 blog_user_creation:
     path:     /user/new/
     defaults: { _controller: BlogUserBundle:Default:new }
+blog_user_availability_ajax:
+    path:     /user/ajax/{username}
+    defaults: { _controller: BlogUserBundle:Default:ajax }
