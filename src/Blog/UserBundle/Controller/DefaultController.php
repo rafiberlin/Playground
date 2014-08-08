@@ -46,7 +46,7 @@ class DefaultController extends Controller
         );
     }
 
-    public function ajaxAction($username)
+    public function ajaxAction($username=null)
     {
         $available = $this->isUsernameAvailable($username);
         return new JsonResponse(array("available" => $available));
